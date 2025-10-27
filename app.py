@@ -20,14 +20,14 @@ if show_bar:
         plot_df, 
         x="nation", 
         y=f"{medal}", 
-        title=f"Medals count({medal}})"
+        title=f"Medals count({medal})"
         )
     fig_bar.update_layout(title_x=0.5, yaxis_title="Count", xaxis_title="Nation", height=500)
     col1.plotly_chart(fig_bar, use_container_width=True)
 
 if show_pie:
     fig_pie = px.pie(plot_df, names="nation", values=f"{medal}",
-                     title=f"Medal Share ({medal}})")
+                     title=f"Medal Share ({medal})")
     fig_pie.update_traces(textinfo="percent+label")
     fig_pie.update_layout(title_x=0.5, height=500)
     col2.plotly_chart(fig_pie, use_container_width=True)
